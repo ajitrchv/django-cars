@@ -11,3 +11,6 @@ def add(request):
 
 def delete(request):
     return render(request,'cars/delete.html')
+
+def home(request):
+    return render(request,'cars/home.html')
