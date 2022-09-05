@@ -4,8 +4,6 @@ from django.urls import reverse
 from django.shortcuts import render
 
 def dchome(request):
-    print('***********************************')
-    # print(reverse('home'))
     try:
         return HttpResponseRedirect(reverse('cars:home'))
     except:

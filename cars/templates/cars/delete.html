@@ -1,5 +1,35 @@
 {% extends "base.html" %}
 
 {% block content%}
-<h1> Delete </h1>
+<div class='container'>
+<h1> DeleteCar </h1>
+
+<br/>
+<div class='container'>
+    <h3> CarsList </h3>
+    <ol>
+        {% for car  in all_cars %}
+        <li>{{car}}</li>
+        {% endfor %}
+    </ol>
+
+
+<h4>Enter a Primary Key to delete a car from the list: </h4>
+
+    <form action="" method='POST'>
+        {% csrf_token %}
+        <div>
+            <input style="width:200px; height:100px; " class="form-control" placeholder="Enter the primary key:" type="text" id="key" name="key">
+        </div>
+        <br/>
+
+        <div>
+            <label for=""></label>
+            <button type="submit" style="width:200px;" class="btn btn-danger">Delete</button>
+        </div>
+
+    </form>  
+
+
+</div>
 {% endblock%}
